@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BasicUnitTesting.iml" filepath="$PROJECT_DIR$/BasicUnitTesting.iml" />
+      <module fileurl="file://C:\Users\BDLoneR\Documents\GitHub\android-basic-testing\BasicUnitTesting.iml" filepath="C:\Users\BDLoneR\Documents\GitHub\android-basic-testing\BasicUnitTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-basic-testing.iml" filepath="$PROJECT_DIR$/android-basic-testing.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\BDLoneR\Documents\GitHub\android-basic-testing\app\app.iml" filepath="C:\Users\BDLoneR\Documents\GitHub\android-basic-testing\app\app.iml" />
     </modules>
   </component>
 </project>
