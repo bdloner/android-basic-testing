@@ -9,8 +9,8 @@ public class UserInfo {
     public String name;
     public Date birthday;
     public String email;
-    public NameValidation nameValidation;
-    public EmailValidation emailValidation;
+    public NameValidation nameValid;
+    public EmailValidation emailValid;
     private UserInfo.userInfoListener userInfoListener;
 
     public interface userInfoListener {
@@ -29,12 +29,12 @@ public class UserInfo {
         this.email = email;
         this.userInfoListener = userInfoListener;
 
-        this.nameValidation = new NameValidation(this);
-        this.emailValidation = new EmailValidation(this);
+        this.nameValid = new NameValidation(this);
+        this.emailValid = new EmailValidation(this);
 
         try {
-            nameValidation.validation();
-            emailValidation.validation();
+            nameValid.validation();
+            emailValid.validation();
         } catch (Exception e) {
             userInfoListener.onShow(e.getMessage());;
         }

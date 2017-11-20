@@ -4,19 +4,19 @@ import java.util.regex.Pattern;
 
 import cc.somkiat.basicunittesting.model.UserInfo;
 
-public class NameOnlyEnglishRule extends Exception implements Rule{
-    public NameOnlyEnglishRule() {
+public class NameOnlyEnglish extends Exception implements Rule{
+    public NameOnlyEnglish() {
 
     }
 
-    public NameOnlyEnglishRule(String s) {
+    public NameOnlyEnglish(String s) {
         super(s);
     }
 
     @Override
     public boolean validate(UserInfo user) throws Exception {
         if (!Pattern.matches("^[a-zA-Z]+$", user.getName())){
-            throw new NameOnlyEnglishRule("Name Only English.");
+            throw new NameOnlyEnglish("Name Only English.");
         }
         return true;
     }

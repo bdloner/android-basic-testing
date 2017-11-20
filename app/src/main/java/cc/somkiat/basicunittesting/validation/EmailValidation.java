@@ -1,8 +1,8 @@
 package cc.somkiat.basicunittesting.validation;
 
 import cc.somkiat.basicunittesting.model.UserInfo;
-import cc.somkiat.basicunittesting.rule.EmailIsEmptyRule;
-import cc.somkiat.basicunittesting.rule.EmailPatternRule;
+import cc.somkiat.basicunittesting.rule.EmailIsEmpty;
+import cc.somkiat.basicunittesting.rule.EmailPattern;
 
 public class EmailValidation {
     UserInfo userInfo;
@@ -11,12 +11,12 @@ public class EmailValidation {
     }
 
     public boolean emailIsEmpty() throws Exception{
-        EmailIsEmptyRule emailIsEmptyRule = new EmailIsEmptyRule();
+        EmailIsEmpty emailIsEmptyRule = new EmailIsEmpty();
         return emailIsEmptyRule.validate(userInfo);
     }
 
     public boolean isEmailPattern() throws Exception{
-        EmailPatternRule EmailPatternRule = new EmailPatternRule();
+        EmailPattern EmailPatternRule = new EmailPattern();
         return EmailPatternRule.validate(userInfo);
     }
 

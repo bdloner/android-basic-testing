@@ -5,16 +5,12 @@ import java.util.regex.Pattern;
 
 import cc.somkiat.basicunittesting.model.UserInfo;
 
-/**
- * Created by khunach on 11/15/2017.
- */
-
-public class EmailPatternRule extends Exception implements Rule {
-    public EmailPatternRule(String s) {
+public class EmailPattern extends Exception implements Rule {
+    public EmailPattern(String s) {
         super(s);
     }
 
-    public EmailPatternRule() {
+    public EmailPattern() {
 
     }
 
@@ -24,7 +20,7 @@ public class EmailPatternRule extends Exception implements Rule {
                 Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX .matcher(user.getEmail());
         if (!matcher.find()){
-            throw new EmailPatternRule("not a email pattern");
+            throw new EmailPattern("not a email pattern");
         }
         return true;
     }

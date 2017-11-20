@@ -1,8 +1,8 @@
 package cc.somkiat.basicunittesting.validation;
 
 import cc.somkiat.basicunittesting.model.UserInfo;
-import cc.somkiat.basicunittesting.rule.NameIsEmptyRule;
-import cc.somkiat.basicunittesting.rule.NameOnlyEnglishRule;
+import cc.somkiat.basicunittesting.rule.NameIsEmpty;
+import cc.somkiat.basicunittesting.rule.NameOnlyEnglish;
 
 public class NameValidation {
     UserInfo userInfo;
@@ -12,12 +12,12 @@ public class NameValidation {
     }
 
     public boolean nameIsEmpty() throws Exception{
-        NameIsEmptyRule nameIsEmptyRule = new NameIsEmptyRule();
+        NameIsEmpty nameIsEmptyRule = new NameIsEmpty();
         return nameIsEmptyRule.validate(userInfo);
     }
 
     public boolean nameOnlyEnglish() throws Exception{
-        NameOnlyEnglishRule nameOnlyEnglishRule = new NameOnlyEnglishRule();
+        NameOnlyEnglish nameOnlyEnglishRule = new NameOnlyEnglish();
         return nameOnlyEnglishRule.validate(userInfo);
     }
 
