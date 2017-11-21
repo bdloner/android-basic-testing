@@ -16,7 +16,7 @@ public class NameValidationTest {
         String name = "bdloner1we24124";
         UserInfo userInfo = new UserInfo(name);
         NameValidation nameValidation = new NameValidation(userInfo);
-        assertTrue("`true` when Name is not empty", nameValidation.nameIsEmpty());
+        assertTrue("Name is not empty", nameValidation.nameIsEmpty());
     }
 
     @Test
@@ -24,7 +24,7 @@ public class NameValidationTest {
         String name = "bdloner";
         UserInfo userInfo = new UserInfo(name);
         NameValidation nameValidation = new NameValidation(userInfo);
-        assertTrue("`true` when Name is OnlyEnglish", nameValidation.nameOnlyEnglish());
+        assertTrue("Name is only English", nameValidation.nameOnlyEnglish());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class NameValidationTest {
         String name = "bdloner";
         UserInfo userInfo = new UserInfo(name);
         NameValidation nameValidation = new NameValidation(userInfo);
-        assertTrue("`true` when Name is Acceptable", nameValidation.validation());
+        assertTrue("Name is Acceptable", nameValidation.validation());
     }
 
     @Test(expected = NameIsEmpty.class)

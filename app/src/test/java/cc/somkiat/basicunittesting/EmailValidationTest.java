@@ -16,7 +16,7 @@ public class EmailValidationTest {
         String email = "bdloner@gmail.com";
         UserInfo userInfo = new UserInfo("" , email);
         EmailValidation emailValidation = new EmailValidation(userInfo);
-        assertTrue("`true` when it's email pattern", emailValidation.isEmailPattern());
+        assertTrue("Invalid  Email is empty", emailValidation.isEmailPattern());
     }
 
     @Test
@@ -24,7 +24,7 @@ public class EmailValidationTest {
         String email = "bdloner@gmail.com";
         UserInfo userInfo = new UserInfo("" , email);
         EmailValidation emailValidation = new EmailValidation(userInfo);
-        assertTrue("`true` when it's email pattern", emailValidation.validation());
+        assertTrue("Invalid  Email that not Email Pattern", emailValidation.validation());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class EmailValidationTest {
         String email = "test123!@#";
         UserInfo userInfo = new UserInfo("" , email);
         EmailValidation emailValidation = new EmailValidation(userInfo);
-        assertTrue("`true` when email is not empty", emailValidation.emailIsEmpty());
+        assertTrue("Invalid  Email", emailValidation.emailIsEmpty());
     }
 
     @Test(expected = EmailIsEmpty.class)
@@ -64,7 +64,7 @@ public class EmailValidationTest {
         String email = "";
         UserInfo userInfo = new UserInfo("" , email);
         EmailValidation emailValidation = new EmailValidation(userInfo);
-        assertTrue("`true` when it's email pattern", emailValidation.validation());
+        assertTrue("Invalid  Email", emailValidation.validation());
     }
 
     @Test(expected = EmailPattern.class)
@@ -80,7 +80,7 @@ public class EmailValidationTest {
         String email = "test";
         UserInfo userInfo = new UserInfo("" , email);
         EmailValidation emailValidation = new EmailValidation(userInfo);
-        assertTrue("`true` when it's email pattern", emailValidation.validation());
+        assertTrue("Invalid  Email", emailValidation.validation());
     }
 
     @Test(expected = EmailPattern.class)
@@ -88,7 +88,7 @@ public class EmailValidationTest {
         String email = "gmail@hotmail";
         UserInfo userInfo = new UserInfo("" , email);
         EmailValidation emailValidation = new EmailValidation(userInfo);
-        assertTrue("`true` when it's email pattern", emailValidation.validation());
+        assertTrue("Invalid  Email", emailValidation.validation());
     }
 
 }
